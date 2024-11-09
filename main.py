@@ -3,9 +3,6 @@ import pickle
 import streamlit as st
 import pandas as pd
 
-
-
-
 #loading model from pickle
 load_model = pickle.load(open('./trained_model.sav','rb'))
 
