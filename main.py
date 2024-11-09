@@ -16,7 +16,7 @@ def house_price_prediction(input_data) :
     #8120000	
     input_data_reshaped = input_data.reshape(-1, 1)
     # Predict price
-    predicted_price = load_model.predict(input_data)
+    predicted_price = load_model.predict(input_data_reshaped)
 
     print("Predicted Price:", predicted_price[0])
 
