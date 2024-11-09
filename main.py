@@ -2,7 +2,6 @@ import numpy as np
 import pickle
 import streamlit as st
 import pandas as pd
-import scikit-learn
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestRegressor
 
