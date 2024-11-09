@@ -14,7 +14,7 @@ def house_price_prediction(input_data) :
     # Predict price
     predicted_price = load_model.predict(input_data_reshaped)
 
-    print("Predicted Price:", predicted_price[0])
+    return "Predicted Price:", predicted_price[0]
 
 def main():
     #title 
