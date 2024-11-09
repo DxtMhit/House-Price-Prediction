@@ -48,7 +48,7 @@ def main():
     prediction = ''
 
     if st.button('Get Price') :
-        prediction = house_price_prediction(area,bedrooms,bathrooms,stories,mainroad,guestroom,basement,hotwaterheating,airconditioning,parking,prefarea,furnished,semi_furnished,unfurnished)
+        prediction = house_price_prediction((area,bedrooms,bathrooms,stories,mainroad,guestroom,basement,hotwaterheating,airconditioning,parking,prefarea,furnished,semi_furnished,unfurnished))
 
     st.success(prediction)  
 
