@@ -10,7 +10,7 @@ load_model = pickle.load(open('./trained_model.sav','rb'))
 def house_price_prediction(input_data) :
     input_data =np.asarray(input_data)
     #8120000	
-    input_data_reshaped = input_data.reshape(-1, 1)
+    input_data_reshaped = input_data.reshape(1, 14)
     # Predict price
     predicted_price = load_model.predict(input_data_reshaped)
 
