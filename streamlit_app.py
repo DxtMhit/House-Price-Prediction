@@ -16,7 +16,7 @@ def house_price_prediction(input_data) :
     predicted_price = float(predicted_price)
     formatted_price = format_in_indian_system(predicted_price)
 
-    return f"Predicted Price: ₹ {formatted_price :,.2f}"
+    return f"Predicted Price: ₹ {formatted_price}"
 
 def format_in_indian_system(number):
     # Format the number in two parts: before and after the decimal
