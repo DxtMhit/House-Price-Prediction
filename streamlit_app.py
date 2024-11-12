@@ -15,7 +15,7 @@ def house_price_prediction(input_data) :
     predicted_price = load_model.predict(input_data_reshaped)
     predicted_price = float(predicted_price)
 
-    return f"Predicted Price: ${predicted_price:,.2f}"
+    return f"Predicted Price: ₹{predicted_price:,.2f}"
 
 def main():
     #title 
