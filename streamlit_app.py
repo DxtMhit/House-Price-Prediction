@@ -14,27 +14,8 @@ def house_price_prediction(input_data) :
     # Predict price
     predicted_price = load_model.predict(input_data_reshaped)
     predicted_price = float(predicted_price)
-    formatted_price = format_in_indian_system(predicted_price)
-
-    return f"Predicted Price: ₹ {formatted_price}"
-
-def format_in_indian_system(number):
-    # Format the number in two parts: before and after the decimal
-    parts = str(f"{number:.2f}").split(".")
-    integer_part = parts[0]
-    decimal_part = parts[1] if len(parts) > 1 else "00"
     
-    # Reverse the integer part for easier processing
-    integer_part_reversed = integer_part[::-1]
-    
-    # Group the first three digits, then every two digits afterward
-    formatted_reversed = ",".join([integer_part_reversed[i:i+2] for i in range(0, len(integer_part_reversed), 2)])
-    if len(formatted_reversed) > 3:
-        formatted_reversed = formatted_reversed[:3] + "," + formatted_reversed[3:]
-    
-    # Reverse back to get the correct order and add the decimal part
-    formatted_number = formatted_reversed[::-1] + "." + decimal_part
-    return formatted_number
+    return f"Predicted Price: ₹ {predicted_price:,.2f}"
 
 
 def main():
